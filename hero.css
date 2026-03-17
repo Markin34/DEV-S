@@ -1,4 +1,4 @@
-/* ─── RESET & BASE ─────────────────────────────────── */
+/* ─── RESET ────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 /* ─── VARIABLES ────────────────────────────────────── */
@@ -13,7 +13,7 @@
   --ff-mono:    'Overpass Mono', monospace;
 }
 
-/* ─── BODY ─────────────────────────────────────────── */
+/* ─── BASE ─────────────────────────────────────────── */
 html, body {
   height: 100%;
   background: var(--ink);
@@ -45,7 +45,6 @@ body::before {
   overflow: hidden;
 }
 
-/* Fondo degradado */
 .hero::before {
   content: '';
   position: absolute;
@@ -56,7 +55,6 @@ body::before {
   pointer-events: none;
 }
 
-/* Línea vertical decorativa */
 .hero::after {
   content: '';
   position: absolute;
@@ -68,7 +66,7 @@ body::before {
   opacity: 0.2;
 }
 
-/* ── LADO IZQUIERDO: Texto ── */
+/* ── Texto izquierdo ── */
 .hero__text {
   position: relative;
   padding: 10rem 3rem 6rem 3rem;
@@ -183,7 +181,7 @@ body::before {
 
 .btn--ghost:hover::after { transform: translateX(4px); }
 
-/* ── LADO DERECHO: Visual ── */
+/* ── Visual derecho ── */
 .hero__visual {
   position: relative;
   height: 100vh;
@@ -223,10 +221,7 @@ body::before {
   transform: translateY(-50%);
 }
 
-.hero__bottle-wrap {
-  position: relative;
-  z-index: 2;
-}
+.hero__bottle-wrap { position: relative; z-index: 2; }
 
 .hero__bottle {
   width: 140px;
@@ -234,7 +229,6 @@ body::before {
   filter: drop-shadow(0 20px 60px rgba(92,26,26,0.6));
 }
 
-/* Badge: Supply */
 .hero__badge {
   position: absolute;
   bottom: 28%;
@@ -265,7 +259,6 @@ body::before {
   line-height: 1;
 }
 
-/* Badge: Red */
 .hero__badge--top {
   position: absolute;
   top: 28%;
@@ -285,7 +278,7 @@ body::before {
   text-transform: uppercase;
 }
 
-/* ── Stats barra inferior ── */
+/* ── Stats ── */
 .hero__stats {
   position: absolute;
   bottom: 3rem;
@@ -383,19 +376,9 @@ body::before {
    RESPONSIVE
 ══════════════════════════════════════════════════════ */
 @media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
+  .hero { grid-template-columns: 1fr; }
   .hero::after { display: none; }
-  .hero__visual {
-    height: 50vh;
-    order: -1;
-  }
-  .hero__text {
-    padding: 2rem 1.6rem 8rem;
-  }
-  .hero__stats {
-    gap: 1.6rem;
-    left: 1.6rem;
-  }
+  .hero__visual { height: 50vh; order: -1; }
+  .hero__text { padding: 2rem 1.6rem 8rem; }
+  .hero__stats { gap: 1.6rem; left: 1.6rem; }
 }

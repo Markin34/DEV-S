@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VINOONCHAIN 1970</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Overpass+Mono:wght@300;400&display=swap" rel="stylesheet" />
+
+  <!-- CSS de cada sección -->
+  <link rel="stylesheet" href="hero.css" />
+  <link rel="stylesheet" href="como-funciona.css" />
+  <!-- Agrega aquí los nuevos CSS cuando los vayas creando -->
+  <!-- <link rel="stylesheet" href="trazabilidad.css" /> -->
+  <!-- <link rel="stylesheet" href="tokenomics.css" /> -->
+  <!-- <link rel="stylesheet" href="vinedo.css" /> -->
+  <!-- <link rel="stylesheet" href="cta.css" /> -->
+</head>
+<body>
+
+  <!-- Las secciones se inyectan aquí automáticamente -->
+  <div id="app"></div>
+
+  <script>
+    // Lista de secciones en orden
+    const secciones = [
+      'Hero.html',
+      'como-funciona.html',
+      // Agrega aquí los nuevos archivos cuando los crees:
+      // 'trazabilidad.html',
+      // 'tokenomics.html',
+      // 'vinedo.html',
+      // 'cta.html',
+    ];
+
+    const app = document.getElementById('app');
+
+    // Carga cada sección y extrae solo el contenido del <body>
+    async function cargarSecciones() {
+      for (const archivo of secciones) {
+        try {
+          const res  = await fetch(archivo);
+          const html = await res.text();
+          const parser = new DOMParser();
+          const doc  = parser.parseFromString(html, 'text/html');
+          const contenido = doc.body.innerHTML;
+          const wrapper = document.createElement('div');
+          wrapper.innerHTML = contenido;
+          app.appendChild(wrapper);
+        } catch (e) {
+          console.warn(`No se pudo cargar: ${archivo}`);
+        }
+      }
+    }
+
+    cargarSecciones();
+  </script>
+
+</body>
+</html>
