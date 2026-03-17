@@ -1,10 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VINOONCHAIN 1970</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Overpass+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="html.css" />
 </head>
 <body>
-    
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <!-- El navbar lo agrega el otro dev en su rama -->
+
+  <!-- PLACEHOLDER: <nav> va aquí -->
+
+  <section class="hero">
+
+  
+
+
+
+    <!-- Texto izquierdo -->
+    <div class="hero__text">
+
+      <p class="hero__eyebrow">Stellar Network · Bolivia · RWA</p>
+
+      <h1 class="hero__title">
+        Vino artesanal,
+        <em>propiedad</em>
+        <span class="year">1970</span>
+      </h1>
+
+      <p class="hero__sub">
+        Cada botella del Viñedo 1970 en Samaipata existe como
+        token nativo en Stellar. Compra antes de la cosecha,
+        sigue cada etapa on-chain y redime tu vino cuando esté listo.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#" class="btn--primary">Pre-comprar tokens</a>
+        <a href="#" class="btn--ghost">Ver trazabilidad</a>
+      </div>
+
+    </div>
+
+    <!-- Visual derecho -->
+    <div class="hero__visual">
+
+      <div class="hero__ring">
+        <div class="hero__ring-dot"></div>
+      </div>
+
+      <div class="hero__bottle-wrap">
+
+        <!-- Botella SVG minimalista -->
+        <svg class="hero__bottle" viewBox="0 0 80 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Cuello -->
+          <path d="M34 0 L34 40 Q28 55 24 75 L24 230 Q24 255 40 255 Q56 255 56 230 L56 75 Q52 55 46 40 L46 0 Z"
+            fill="url(#bottleGrad)" stroke="rgba(201,168,76,0.3)" stroke-width="0.8"/>
+          <!-- Reflejos -->
+          <path d="M30 80 Q29 140 30 200" stroke="rgba(255,255,255,0.08)" stroke-width="2" stroke-linecap="round"/>
+          <path d="M35 10 L35 36" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Etiqueta -->
+          <rect x="27" y="140" width="26" height="60" rx="1" fill="rgba(245,240,232,0.06)" stroke="rgba(201,168,76,0.25)" stroke-width="0.6"/>
+          <text x="40" y="163" font-family="serif" font-size="5" fill="rgba(201,168,76,0.7)" text-anchor="middle" letter-spacing="1">VINO</text>
+          <text x="40" y="172" font-family="serif" font-size="4" fill="rgba(245,240,232,0.4)" text-anchor="middle" letter-spacing="0.5">ONCHAIN</text>
+          <line x1="30" y1="177" x2="50" y2="177" stroke="rgba(201,168,76,0.2)" stroke-width="0.4"/>
+          <text x="40" y="186" font-family="serif" font-size="6" fill="rgba(201,168,76,0.5)" text-anchor="middle">1970</text>
+          <!-- Tapón -->
+          <rect x="35" y="-4" width="10" height="8" rx="1" fill="url(#corkGrad)"/>
+          <defs>
+            <linearGradient id="bottleGrad" x1="24" y1="0" x2="56" y2="0" gradientUnits="userSpaceOnUse">
+              <stop offset="0%"   stop-color="#1a0a0a"/>
+              <stop offset="40%"  stop-color="#2d1010"/>
+              <stop offset="100%" stop-color="#1a0a0a"/>
+            </linearGradient>
+            <linearGradient id="corkGrad" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+              <stop offset="0%" stop-color="#c9a84c"/>
+              <stop offset="100%" stop-color="#8a6a20"/>
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <!-- Badge supply -->
+        <div class="hero__badge">
+          <span class="hero__badge-label">Supply total</span>
+          <span class="hero__badge-value">500</span>
+        </div>
+
+        <!-- Badge red -->
+        <div class="hero__badge--top">
+          <span>Stellar · VINO1970</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="hero__stats">
+      <div class="hero__stat">
+        <div class="hero__stat-num">15 USDC</div>
+        <div class="hero__stat-label">Precio pre-venta</div>
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-num">1.750 msnm</div>
+        <div class="hero__stat-label">Samaipata, Bolivia</div>
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-num">2025</div>
+        <div class="hero__stat-label">Cosecha</div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+
+  </section>
+
 </body>
 </html>
