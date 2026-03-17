@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Header – VINOONCHAIN 1970</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Overpass+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Header.css" />
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+
+  <!-- Línea decorativa superior -->
+  <div class="header__top-line"></div>
+
+  <div class="header__inner">
+
+    <!-- Logo -->
+    <a href="#" class="header__logo">
+      <span class="header__logo-mark">
+        <!-- Ícono minimalista de copa/cadena -->
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="11" r="10" stroke="currentColor" stroke-width="0.8" opacity="0.5"/>
+          <path d="M7 7 L11 15 L15 7" stroke="currentColor" stroke-width="0.9" fill="none"/>
+          <line x1="11" y1="15" x2="11" y2="19" stroke="currentColor" stroke-width="0.9"/>
+          <line x1="8.5" y1="19" x2="13.5" y2="19" stroke="currentColor" stroke-width="0.9"/>
+        </svg>
+      </span>
+      <span class="header__logo-text">
+        <span class="header__logo-name">VINOONCHAIN</span>
+        <span class="header__logo-year">1970</span>
+      </span>
+    </a>
+
+    <!-- Navegación central -->
+    <nav class="header__nav" id="header-nav">
+      <ul class="header__nav-list">
+        <li><a href="#" class="header__nav-link">Vino</a></li>
+        <li><a href="#" class="header__nav-link">Trazabilidad</a></li>
+        <li><a href="#" class="header__nav-link">Tokenomics</a></li>
+        <li><a href="#" class="header__nav-link">Viñedo</a></li>
+        <li><a href="#" class="header__nav-link">Nosotros</a></li>
+      </ul>
+    </nav>
+
+    <!-- Acciones derecha -->
+    <div class="header__actions">
+      <a href="#" class="header__cta">
+        <span>Adquirir Token</span>
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+          <path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1"/>
+        </svg>
+      </a>
+      <!-- Botón hamburguesa (móvil) -->
+      <button class="header__burger" id="header-burger" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Línea inferior dorada -->
+  <div class="header__bottom-line"></div>
+
+</header>
+
+<script>
+  const header  = document.getElementById('site-header');
+  const burger  = document.getElementById('header-burger');
+  const nav     = document.getElementById('header-nav');
+
+  // Scroll: agrega clase .scrolled al bajar 60px
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // Burger toggle (móvil)
+  burger.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    burger.classList.toggle('active', open);
+    burger.setAttribute('aria-expanded', open);
+  });
+
+  // Cerrar nav al hacer clic en un link (móvil)
+  nav.querySelectorAll('.header__nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      burger.classList.remove('active');
+    });
+  });
+</script>
+
+</body>
+</html>
