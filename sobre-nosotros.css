@@ -1,0 +1,382 @@
+/* ─── RESET ────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ─── VARIABLES ────────────────────────────────────── */
+:root {
+  --ink:        #1a0008;
+  --ink-soft:   #2d0012;
+  --paper:      #ffffff;
+  --vino:       #8b0022;
+  --vino-deep:  #5c0016;
+  --vino-light: #b5003a;
+  --gold:       #e8952a;
+  --gold-light: #f5b95a;
+  --ff-display: 'Cormorant Garamond', Georgia, serif;
+  --ff-mono:    'Overpass Mono', monospace;
+}
+
+/* ─── BASE ─────────────────────────────────────────── */
+html, body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--ff-display);
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* ─── UTILIDADES ────────────────────────────────────── */
+.sn-eyebrow {
+  font-family: var(--ff-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+.sn-eyebrow::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: var(--gold);
+}
+.sn-eyebrow--light {
+  color: var(--gold-light);
+}
+.sn-eyebrow--light::before {
+  background: var(--gold-light);
+}
+
+.sn-title {
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+}
+.sn-title em {
+  font-style: italic;
+  color: var(--gold-light);
+  display: block;
+}
+
+.sn-sub {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.65);
+  max-width: 50ch;
+}
+
+/* ══════════════════════════════════════════════════════
+   SECCIÓN 1 — PROBLEMA
+══════════════════════════════════════════════════════ */
+.sn-problem {
+  min-height: 100vh;
+  background: linear-gradient(160deg, var(--ink) 0%, var(--ink-soft) 100%);
+  display: flex;
+  align-items: center;
+  padding: 7rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.sn-problem::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 70% at 100% 50%, rgba(139,0,34,0.2) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.sn-problem__inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sn-problem__header {
+  margin-bottom: 4rem;
+}
+
+.sn-problem__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.06);
+}
+
+.sn-problem__card {
+  background: var(--ink);
+  padding: 2.5rem 2rem;
+  position: relative;
+  transition: background 0.3s;
+}
+.sn-problem__card:hover {
+  background: rgba(139,0,34,0.15);
+}
+
+.sn-problem__card-num {
+  font-family: var(--ff-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.25);
+  margin-bottom: 1.5rem;
+}
+
+.sn-problem__card-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--vino-light);
+  margin-bottom: 1.2rem;
+}
+.sn-problem__card-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.sn-problem__card-title {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+
+.sn-problem__card-desc {
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ══════════════════════════════════════════════════════
+   SECCIÓN 2 — SOLUCIÓN
+══════════════════════════════════════════════════════ */
+.sn-solution {
+  min-height: 100vh;
+  background: linear-gradient(160deg, var(--ink-soft) 0%, var(--vino-deep) 100%);
+  display: flex;
+  align-items: center;
+  padding: 7rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.sn-solution::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 60% at 0% 50%, rgba(232,149,42,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.sn-solution__inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.sn-solution__header { }
+
+.sn-solution__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sn-solution__item {
+  display: grid;
+  grid-template-columns: 1.5rem 1fr;
+  gap: 1.4rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.sn-solution__item:last-of-type {
+  border-bottom: none;
+}
+
+.sn-solution__item-marker {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+
+.sn-solution__item-title {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.sn-solution__item-desc {
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 0.8rem;
+}
+
+.sn-solution__item-tag {
+  font-family: var(--ff-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(232,149,42,0.3);
+  padding: 0.25rem 0.6rem;
+  display: inline-block;
+}
+
+/* ══════════════════════════════════════════════════════
+   SECCIÓN 3 — MISIÓN / VISIÓN
+══════════════════════════════════════════════════════ */
+.sn-mv {
+  min-height: 100vh;
+  background: var(--ink);
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  overflow: hidden;
+}
+
+.sn-mv::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 50% at 50% 100%, rgba(139,0,34,0.2) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.sn-mv__inner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+}
+
+/* Misión — fondo vino */
+.sn-mv__card--mision {
+  background: linear-gradient(135deg, var(--vino-deep) 0%, var(--vino) 100%);
+  padding: 6rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Divisor */
+.sn-mv__divider {
+  background: rgba(255,255,255,0.08);
+}
+
+/* Visión — fondo oscuro */
+.sn-mv__card--vision {
+  background: var(--ink-soft);
+  padding: 6rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sn-mv__quote {
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 2.5rem;
+  max-width: 36ch;
+}
+
+.sn-mv__quote--dark {
+  color: rgba(255,255,255,0.85);
+}
+
+/* Origen */
+.sn-mv__origin {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--ff-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+
+.sn-mv__origin-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold-light);
+  flex-shrink: 0;
+}
+
+/* Productos futuros */
+.sn-mv__products {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.sn-mv__product {
+  font-family: var(--ff-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(232,149,42,0.4);
+  padding: 0.3rem 0.7rem;
+}
+
+.sn-mv__product--future {
+  color: rgba(255,255,255,0.3);
+  border-color: rgba(255,255,255,0.1);
+}
+
+/* ══════════════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .sn-problem,
+  .sn-solution { padding: 5rem 1.4rem; }
+
+  .sn-problem__grid { grid-template-columns: 1fr; }
+
+  .sn-solution__inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .sn-mv__inner {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1px auto;
+  }
+  .sn-mv__divider {
+    background: rgba(255,255,255,0.08);
+    height: 1px;
+    width: 100%;
+  }
+  .sn-mv__card--mision,
+  .sn-mv__card--vision {
+    padding: 4rem 1.4rem;
+  }
+}
