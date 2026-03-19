@@ -1,191 +1,172 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VINOONCHAIN 1970 — Trazabilidad</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Overpass+Mono:wght@300;400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="trazabilidad.css" />
-</head>
-<body>
+<link rel="stylesheet" href="trazabilidad.css" />
 
-  <section class="trz">
+<section class="trz">
 
-    <!-- Lado izquierdo: texto -->
-    <div class="trz__text">
+  <!-- Lado izquierdo: texto -->
+  <div class="trz__text">
 
-      <p class="trz__eyebrow">Verificación on-chain</p>
+    <p class="trz__eyebrow">Verificación on-chain</p>
 
-      <h2 class="trz__title">
-        Cada botella tiene
-        <em>su propia historia</em>
-        en la blockchain.
-      </h2>
+    <h2 class="trz__title">
+      Cada botella tiene
+      <em>su propia historia</em>
+      en la blockchain.
+    </h2>
 
-      <p class="trz__sub">
-        Escanea el QR de cualquier botella VINOONCHAIN 1970 
-        y accede al historial completo de producción — 
-        verificado y anclado en Stellar. Sin intermediarios, 
-        sin confianza ciega.
-      </p>
+    <p class="trz__sub">
+      Escanea el QR de cualquier botella VINOONCHAIN 1970
+      y accede al historial completo de producción —
+      verificado y anclado en Stellar. Sin intermediarios,
+      sin confianza ciega.
+    </p>
 
-      <!-- 3 puntos clave -->
-      <div class="trz__points">
+    <div class="trz__points">
 
-        <div class="trz__point">
-          <div class="trz__point-icon">
-            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="4" width="10" height="10" rx="1" stroke="currentColor" stroke-width="1.2"/>
-              <rect x="18" y="4" width="10" height="10" rx="1" stroke="currentColor" stroke-width="1.2"/>
-              <rect x="4" y="18" width="10" height="10" rx="1" stroke="currentColor" stroke-width="1.2"/>
-              <rect x="20" y="20" width="2" height="2" fill="currentColor"/>
-              <rect x="24" y="20" width="2" height="2" fill="currentColor"/>
-              <rect x="20" y="24" width="2" height="2" fill="currentColor"/>
-              <rect x="24" y="24" width="2" height="2" fill="currentColor"/>
-            </svg>
-          </div>
-          <div>
-            <h4 class="trz__point-title">Escanea el QR</h4>
-            <p class="trz__point-desc">Cada botella tiene un código único impreso en la etiqueta. Sin app, sin wallet.</p>
-          </div>
+      <div class="trz__point">
+        <div class="trz__point-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="4" width="10" height="10" rx="1" stroke="currentColor" stroke-width="1.2"/>
+            <rect x="18" y="4" width="10" height="10" rx="1" stroke="currentColor" stroke-width="1.2"/>
+            <rect x="4" y="18" width="10" height="10" rx="1" stroke="currentColor" stroke-width="1.2"/>
+            <rect x="20" y="20" width="2" height="2" fill="currentColor"/>
+            <rect x="24" y="20" width="2" height="2" fill="currentColor"/>
+            <rect x="20" y="24" width="2" height="2" fill="currentColor"/>
+            <rect x="24" y="24" width="2" height="2" fill="currentColor"/>
+          </svg>
         </div>
-
-        <div class="trz__point">
-          <div class="trz__point-icon">
-            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="1.2"/>
-              <path d="M10 16 L14 20 L22 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div>
-            <h4 class="trz__point-title">Verifica cada etapa</h4>
-            <p class="trz__point-desc">Cosecha, fermentación, barrica, embotellado — cada paso registrado y fechado.</p>
-          </div>
+        <div>
+          <h4 class="trz__point-title">Escanea el QR</h4>
+          <p class="trz__point-desc">Cada botella tiene un código único impreso en la etiqueta. Sin app, sin wallet.</p>
         </div>
+      </div>
 
-        <div class="trz__point">
-          <div class="trz__point-icon">
-            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 4 L28 10 L28 22 L16 28 L4 22 L4 10 Z" stroke="currentColor" stroke-width="1.2"/>
-              <path d="M16 4 L16 28 M4 10 L28 10 M4 22 L28 22" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
-            </svg>
-          </div>
-          <div>
-            <h4 class="trz__point-title">Confirmado en Stellar</h4>
-            <p class="trz__point-desc">El hash de cada etapa está anclado en el ledger. Inmutable y público.</p>
-          </div>
+      <div class="trz__point">
+        <div class="trz__point-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M10 16 L14 20 L22 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
+        <div>
+          <h4 class="trz__point-title">Verifica cada etapa</h4>
+          <p class="trz__point-desc">Cosecha, fermentación, barrica, embotellado — cada paso registrado y fechado.</p>
+        </div>
+      </div>
 
+      <div class="trz__point">
+        <div class="trz__point-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 4 L28 10 L28 22 L16 28 L4 22 L4 10 Z" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M16 4 L16 28 M4 10 L28 10 M4 22 L28 22" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
+          </svg>
+        </div>
+        <div>
+          <h4 class="trz__point-title">Confirmado en Stellar</h4>
+          <p class="trz__point-desc">El hash de cada etapa está anclado en el ledger. Inmutable y público.</p>
+        </div>
       </div>
 
     </div>
 
-    <!-- Lado derecho: tarjeta de botella -->
-    <div class="trz__visual">
+  </div>
 
-      <!-- Tarjeta demo -->
-      <div class="trz__card">
+  <!-- Lado derecho: tarjeta de botella -->
+  <div class="trz__visual">
 
-        <div class="trz__card-header">
-          <div>
-            <div class="trz__card-eyebrow">Botella verificada</div>
-            <div class="trz__card-bottle">#042 <span>de 500</span></div>
+    <div class="trz__card">
+
+      <div class="trz__card-header">
+        <div>
+          <div class="trz__card-eyebrow">Botella verificada</div>
+          <div class="trz__card-bottle">#042 <span>de 500</span></div>
+        </div>
+        <div class="trz__card-status">
+          <span class="trz__card-status-dot"></span>
+          Activo
+        </div>
+      </div>
+
+      <div class="trz__card-product">
+        <div class="trz__card-name">Viñedo 1970 · Tannat</div>
+        <div class="trz__card-origin">Samaipata, Bolivia · 1.750 msnm · 2025</div>
+      </div>
+
+      <div class="trz__card-divider"></div>
+
+      <div class="trz__timeline">
+
+        <div class="trz__stage trz__stage--done">
+          <div class="trz__stage-check">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8 L6 11 L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <div class="trz__card-status">
-            <span class="trz__card-status-dot"></span>
-            Activo
+          <div class="trz__stage-info">
+            <span class="trz__stage-name">Cosecha</span>
+            <span class="trz__stage-date">2025-03-15</span>
           </div>
+          <span class="trz__stage-badge">Verificado</span>
         </div>
 
-        <div class="trz__card-product">
-          <div class="trz__card-name">Viñedo 1970 · Tannat</div>
-          <div class="trz__card-origin">Samaipata, Bolivia · 1.750 msnm · 2025</div>
+        <div class="trz__stage trz__stage--done">
+          <div class="trz__stage-check">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8 L6 11 L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="trz__stage-info">
+            <span class="trz__stage-name">Fermentación</span>
+            <span class="trz__stage-date">2025-04-20</span>
+          </div>
+          <span class="trz__stage-badge">Verificado</span>
         </div>
 
-        <div class="trz__card-divider"></div>
-
-        <!-- Timeline -->
-        <div class="trz__timeline">
-
-          <div class="trz__stage trz__stage--done">
-            <div class="trz__stage-check">
-              <svg viewBox="0 0 16 16" fill="none"><path d="M3 8 L6 11 L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <div class="trz__stage-info">
-              <span class="trz__stage-name">Cosecha</span>
-              <span class="trz__stage-date">2025-03-15</span>
-            </div>
-            <span class="trz__stage-badge">Verificado</span>
+        <div class="trz__stage trz__stage--done">
+          <div class="trz__stage-check">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8 L6 11 L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-
-          <div class="trz__stage trz__stage--done">
-            <div class="trz__stage-check">
-              <svg viewBox="0 0 16 16" fill="none"><path d="M3 8 L6 11 L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <div class="trz__stage-info">
-              <span class="trz__stage-name">Fermentación</span>
-              <span class="trz__stage-date">2025-04-20</span>
-            </div>
-            <span class="trz__stage-badge">Verificado</span>
+          <div class="trz__stage-info">
+            <span class="trz__stage-name">Barrica</span>
+            <span class="trz__stage-date">2025-08-01</span>
           </div>
-
-          <div class="trz__stage trz__stage--done">
-            <div class="trz__stage-check">
-              <svg viewBox="0 0 16 16" fill="none"><path d="M3 8 L6 11 L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <div class="trz__stage-info">
-              <span class="trz__stage-name">Barrica</span>
-              <span class="trz__stage-date">2025-08-01</span>
-            </div>
-            <span class="trz__stage-badge">Verificado</span>
-          </div>
-
-          <div class="trz__stage trz__stage--done">
-            <div class="trz__stage-check">
-              <svg viewBox="0 0 16 16" fill="none"><path d="M3 8 L6 11 L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <div class="trz__stage-info">
-              <span class="trz__stage-name">Embotellado</span>
-              <span class="trz__stage-date">2025-11-10</span>
-            </div>
-            <span class="trz__stage-badge">Verificado</span>
-          </div>
-
-          <div class="trz__stage trz__stage--done">
-            <div class="trz__stage-check">
-              <svg viewBox="0 0 16 16" fill="none"><path d="M3 8 L6 11 L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <div class="trz__stage-info">
-              <span class="trz__stage-name">QA & Etiquetado</span>
-              <span class="trz__stage-date">2025-12-01</span>
-            </div>
-            <span class="trz__stage-badge">Verificado</span>
-          </div>
-
+          <span class="trz__stage-badge">Verificado</span>
         </div>
 
-        <div class="trz__card-divider"></div>
+        <div class="trz__stage trz__stage--done">
+          <div class="trz__stage-check">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8 L6 11 L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="trz__stage-info">
+            <span class="trz__stage-name">Embotellado</span>
+            <span class="trz__stage-date">2025-11-10</span>
+          </div>
+          <span class="trz__stage-badge">Verificado</span>
+        </div>
 
-        <!-- Hash on-chain -->
-        <div class="trz__card-hash">
-          <div class="trz__card-hash-label">Hash on-chain</div>
-          <div class="trz__card-hash-value">3f7a9c2d...e8b1f042</div>
-          <a href="#" class="trz__card-hash-link">Ver en Stellar Explorer →</a>
+        <div class="trz__stage trz__stage--done">
+          <div class="trz__stage-check">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8 L6 11 L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="trz__stage-info">
+            <span class="trz__stage-name">QA & Etiquetado</span>
+            <span class="trz__stage-date">2025-12-01</span>
+          </div>
+          <span class="trz__stage-badge">Verificado</span>
         </div>
 
       </div>
 
-      <!-- URL de ejemplo -->
-      <div class="trz__url">
-        <span class="trz__url-label">Tu botella en</span>
-        <span class="trz__url-value">app.vinoonchain.com/trace/VN1970-042</span>
+      <div class="trz__card-divider"></div>
+
+      <div class="trz__card-hash">
+        <div class="trz__card-hash-label">Hash on-chain</div>
+        <div class="trz__card-hash-value">3f7a9c2d...e8b1f042</div>
+        <a href="#" class="trz__card-hash-link">Ver en Stellar Explorer →</a>
       </div>
 
     </div>
 
-  </section>
+    <div class="trz__url">
+      <span class="trz__url-label">Tu botella en</span>
+      <span class="trz__url-value">app.vinoonchain.com/trace/VN1970-042</span>
+    </div>
 
-</body>
-</html>
+  </div>
+
+</section>
