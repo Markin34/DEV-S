@@ -1,0 +1,109 @@
+<link rel="stylesheet" href="tokenomics.css" />
+
+<section class="tok">
+
+  <!-- Lado izquierdo -->
+  <div class="tok__left">
+
+    <p class="tok__eyebrow">Tokenomics</p>
+
+    <h2 class="tok__title">
+      Un modelo simple,
+      <em>transparente y verificable.</em>
+    </h2>
+
+    <p class="tok__sub">
+      500 botellas. 500 tokens. Supply fijo sellado en Stellar.
+      El precio refleja el avance real de la producción —
+      cada etapa completada aumenta el valor del token.
+    </p>
+
+    <div class="tok__stats">
+      <div class="tok__stat">
+        <div class="tok__stat-num">500</div>
+        <div class="tok__stat-label">Botellas únicas</div>
+      </div>
+      <div class="tok__stat">
+        <div class="tok__stat-num">1 : 1</div>
+        <div class="tok__stat-label">Token por botella</div>
+      </div>
+      <div class="tok__stat">
+        <div class="tok__stat-num">15</div>
+        <div class="tok__stat-label">USDC precio inicial</div>
+      </div>
+      <div class="tok__stat">
+        <div class="tok__stat-num">0</div>
+        <div class="tok__stat-label">Decimales — solo enteros</div>
+      </div>
+    </div>
+
+    <div class="tok__reasons">
+      <div class="tok__reason">
+        <div class="tok__reason-dot"></div>
+        <p class="tok__reason-text"><strong>Fondos protegidos.</strong> El USDC de los compradores va a un contrato escrow. El viñedo recibe los fondos solo cuando cada etapa es verificada.</p>
+      </div>
+      <div class="tok__reason">
+        <div class="tok__reason-dot"></div>
+        <p class="tok__reason-text"><strong>Supply fijo e irreversible.</strong> El issuer está bloqueado después de la emisión. No se puede crear ni un token más.</p>
+      </div>
+      <div class="tok__reason">
+        <div class="tok__reason-dot"></div>
+        <p class="tok__reason-text"><strong>Redimible por botella física.</strong> Cada token se canjea por una botella real en el Viñedo 1970, Samaipata.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Lado derecho -->
+  <div class="tok__right">
+
+    <div class="tok__table-header">
+      <p class="tok__table-title">Precio por etapa de producción</p>
+      <p class="tok__table-sub">El precio sube a medida que avanza la producción</p>
+    </div>
+
+    <table class="tok__table">
+      <thead class="tok__table-head">
+        <tr>
+          <th>Etapa</th>
+          <th>Precio</th>
+          <th>Variación</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="tok__table-row tok__table-row--active">
+          <td class="tok__table-etapa tok__table-etapa--now">Pre-venta</td>
+          <td class="tok__table-precio tok__table-precio--now">15 USDC</td>
+          <td class="tok__table-inc">—</td>
+        </tr>
+        <tr class="tok__table-row">
+          <td class="tok__table-etapa">Post Cosecha</td>
+          <td class="tok__table-precio">18 USDC</td>
+          <td class="tok__table-inc tok__table-inc--pos">+20%</td>
+        </tr>
+        <tr class="tok__table-row">
+          <td class="tok__table-etapa">Post Fermentación</td>
+          <td class="tok__table-precio">22 USDC</td>
+          <td class="tok__table-inc tok__table-inc--pos">+22%</td>
+        </tr>
+        <tr class="tok__table-row">
+          <td class="tok__table-etapa">Post Embotellado</td>
+          <td class="tok__table-precio">28 USDC</td>
+          <td class="tok__table-inc tok__table-inc--pos">+27%</td>
+        </tr>
+        <tr class="tok__table-row">
+          <td class="tok__table-etapa">Listo para redimir</td>
+          <td class="tok__table-precio">35 USDC</td>
+          <td class="tok__table-inc tok__table-inc--pos">+25%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="tok__footnote">
+      <span class="tok__footnote-icon">⬡</span>
+      Asset nativo Stellar · credit_alphanum12 · Issuer bloqueado post-emisión
+    </div>
+
+  </div>
+
+</section>

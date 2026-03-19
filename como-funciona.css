@@ -2,15 +2,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 /* ─── VARIABLES ────────────────────────────────────── */
-:root {
-  --ink:        #0a0705;
-  --paper:      #f5f0e8;
-  --vino:       #5c1a1a;
-  --gold:       #c9a84c;
-  --gold-light: #e8d08a;
-  --ff-display: 'Cormorant Garamond', Georgia, serif;
-  --ff-mono:    'Overpass Mono', monospace;
-}
+
 
 /* ─── BASE ─────────────────────────────────────────── */
 html, body {

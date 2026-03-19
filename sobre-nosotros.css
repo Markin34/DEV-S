@@ -2,18 +2,6 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 /* ─── VARIABLES ────────────────────────────────────── */
-:root {
-  --ink:        #1a0008;
-  --ink-soft:   #2d0012;
-  --paper:      #ffffff;
-  --vino:       #8b0022;
-  --vino-deep:  #5c0016;
-  --vino-light: #b5003a;
-  --gold:       #e8952a;
-  --gold-light: #f5b95a;
-  --ff-display: 'Cormorant Garamond', Georgia, serif;
-  --ff-mono:    'Overpass Mono', monospace;
-}
 
 /* ─── BASE ─────────────────────────────────────────── */
 html, body {

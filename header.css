@@ -4,23 +4,7 @@
 ══════════════════════════════════════════════════════ */
 
 /* ─── Variables (espejo de hero.css) ──────────────── */
-:root {
-  --ink:        #0a0705;
-  --paper:      #f5f0e8;
-  --vino:       #5c1a1a;
-  --vino-deep:  #3a0f0f;
-  --gold:       #c9a84c;
-  --gold-light: #e8d08a;
-  --ff-display: 'Cormorant Garamond', Georgia, serif;
-  --ff-mono:    'Overpass Mono', monospace;
 
-  /* Header específico */
-  --header-h:      72px;
-  --header-h-sm:   60px;
-  --header-bg:     rgba(10, 7, 5, 0);
-  --header-border: rgba(201, 168, 76, 0.12);
-  --transition:    0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 /* ─── Contenedor principal ────────────────────────── */
 .site-header {

@@ -1,0 +1,224 @@
+/* ══════════════════════════════════════════════════════
+   TOKENOMICS — solo estilos de esta sección
+   Reset y variables están en global.css
+══════════════════════════════════════════════════════ */
+
+.tok {
+  min-height: 100vh;
+  padding: 7rem 3rem;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--ink) 0%, var(--ink-soft) 50%, var(--vino-deep) 100%);
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.tok::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 60% at 0% 50%, rgba(232,149,42,0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* ── Lado izquierdo ── */
+.tok__left { position: relative; z-index: 2; }
+
+.tok__eyebrow {
+  font-family: var(--ff-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+.tok__eyebrow::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: var(--gold);
+}
+
+.tok__title {
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+}
+.tok__title em {
+  font-style: italic;
+  color: var(--gold-light);
+  display: block;
+}
+
+.tok__sub {
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.6);
+  max-width: 38ch;
+  margin-bottom: 3rem;
+}
+
+/* Stats */
+.tok__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(255,255,255,0.06);
+  margin-bottom: 3rem;
+}
+
+.tok__stat {
+  background: var(--ink);
+  padding: 1.4rem 1.6rem;
+  transition: background 0.3s;
+}
+.tok__stat:hover { background: rgba(139,0,34,0.15); }
+
+.tok__stat-num {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--gold-light);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.tok__stat-label {
+  font-family: var(--ff-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+
+/* Razones */
+.tok__reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.tok__reason {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+.tok__reason-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+}
+.tok__reason-text {
+  font-size: 0.92rem;
+  font-weight: 300;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.65);
+}
+.tok__reason-text strong {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+/* ── Lado derecho ── */
+.tok__right { position: relative; z-index: 2; }
+
+.tok__table-header {
+  margin-bottom: 1.2rem;
+}
+.tok__table-title {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+.tok__table-sub {
+  font-family: var(--ff-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+}
+
+/* Tabla */
+.tok__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.tok__table-head th {
+  font-family: var(--ff-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  padding: 0.6rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.tok__table-row td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 0.9rem;
+}
+.tok__table-row:last-of-type td { border-bottom: none; }
+
+.tok__table-row--active {
+  background: rgba(232,149,42,0.06);
+}
+
+.tok__table-etapa { color: rgba(255,255,255,0.6); }
+.tok__table-etapa--now { color: #ffffff; font-weight: 400; }
+
+.tok__table-precio {
+  font-family: var(--ff-mono);
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+}
+.tok__table-precio--now { color: var(--gold-light); }
+
+.tok__table-inc {
+  font-family: var(--ff-mono);
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.25);
+}
+.tok__table-inc--pos { color: #2ecc71; }
+
+/* Footnote */
+.tok__footnote {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.4rem;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  font-family: var(--ff-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.3);
+}
+.tok__footnote-icon {
+  color: var(--gold);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .tok {
+    grid-template-columns: 1fr;
+    padding: 5rem 1.4rem;
+    gap: 3rem;
+  }
+}
