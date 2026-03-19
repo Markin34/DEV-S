@@ -4,8 +4,13 @@
 ══════════════════════════════════════════════════════ */
 
 /* ─── Variables (espejo de hero.css) ──────────────── */
-
-
+:root {
+  --header-h:      72px;
+  --header-h-sm:   60px;
+  --header-bg:     rgba(10, 7, 5, 0);
+  --header-border: rgba(201, 168, 76, 0.12);
+  --transition:    0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
 /* ─── Contenedor principal ────────────────────────── */
 .site-header {
   position: fixed;
